@@ -54,20 +54,13 @@ The `tftpboot` directory should look like this after `img.d` is copied:
 tftpboot/
     img.d/
         bzImage - Linux kernel image
-        init - gzipped cpio ramdisk of runmode filesystem
-        SHA256SUM - checksums of aforementioned files
-    pxelinux.cfg/
-        default - PXE configuration file tuned for NI Linux RT
-    pxelinux.0 - x86_64 Syslinux PXE boot loader (binary)
-    ldlinux.c32 - x86_64 Syslinux PXE boot loader (binary)
+        ramdisk.xz - compressed cpio ramdisk of runmode filesystem
+    grub/
+        grub.cfg - grub configuration file tuned for NI Linux RT
+    grubx64.efi - x86_64 grub EFI boot loader (binary)
 ```
 
-NOTE: You can compile your own Syslinux PXE boot loader if desired.
-
-Syslinux PXE Documentation: https://wiki.syslinux.org/wiki/index.php?title=PXELINUX
-
-Syslinux Source: https://mirrors.edge.kernel.org/pub/linux/utils/boot/syslinux/
-
+NOTE: You can compile your own grub boot loader if desired.
 
 ## PXE Image Hosting Example
 
