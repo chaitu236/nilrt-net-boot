@@ -80,6 +80,8 @@ may create problems for other users/devices on your network!
    address on the new network. You can change the `192.168.92.X` subnet
    if it's already in use. Be sure to update dnsmasq.conf accordingly.
 
+   Note that dhcp-boot=grubx64.efi should be present in dnsmasq settings.
+
 3. Run `dnsmasq --no-daemon --conf-file=dnsmasq.conf --tftp-root="$PWD/tftpboot" --interface=demoEth`
    to launch DHCP and TFTP services.
 
